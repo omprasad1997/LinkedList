@@ -92,4 +92,21 @@ public class MyLinkedListTest {
         Assertions.assertTrue(result);
     }
 
+    @Test
+    public void givenValueWhenSearchedInLinkedListShouldPassResult(){
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.printMyNodes();
+        int nodePosition   = myLinkedList.searchNode(mySecondNode);
+        System.out.println(mySecondNode.getKey() + " is at postion : " + nodePosition);
+        boolean result =  (nodePosition==2);
+        Assertions.assertTrue(result);
+    }
+
 }
