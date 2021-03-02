@@ -69,7 +69,6 @@ public class MyLinkedList {
         tempNode = tempNode.getNext();
         return tempNode;
     }
-
     public int searchNode(INode myGivenNode) {
         int count = 0;
         INode tempNode = head;
