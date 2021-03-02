@@ -37,6 +37,4 @@ public class MyLinkedListTest {
                 MyLinkedList.tail.equals(myThirdNode);
         Assertions.assertTrue(result);
     }
-
-
 }
