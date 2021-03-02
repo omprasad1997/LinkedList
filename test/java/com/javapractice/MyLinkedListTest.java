@@ -108,5 +108,4 @@ public class MyLinkedListTest {
         boolean result =  (nodePosition==2);
         Assertions.assertTrue(result);
     }
-
 }
