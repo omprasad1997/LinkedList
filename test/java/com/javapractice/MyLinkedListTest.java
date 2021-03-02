@@ -37,4 +37,22 @@ public class MyLinkedListTest {
                 MyLinkedList.tail.equals(myThirdNode);
         Assertions.assertTrue(result);
     }
+    @Test
+    public void given3NumbersWhenInsertingSecondInBetweenShouldPassLinkedListResult(){
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.printMyNodes();
+        myLinkedList.insert(myFirstNode,mySecondNode);
+        myLinkedList.printMyNodes();
+        boolean result =  MyLinkedList.head.equals(myFirstNode) &&
+                MyLinkedList.head.getNext().equals(mySecondNode) &&
+                MyLinkedList.tail.equals(myThirdNode);
+        Assertions.assertTrue(result);
+    }
+
 }
