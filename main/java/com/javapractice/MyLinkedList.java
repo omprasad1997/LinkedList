@@ -41,7 +41,7 @@ public class MyLinkedList {
         if(this.head == null){
             this.head = newNode;
         }else{
-            this.tail.setNext(newNode) ;
+            this.tail.setNext(newNode);
             this.tail = newNode;
         }
     }
