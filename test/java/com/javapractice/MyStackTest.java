@@ -32,7 +32,19 @@ public class MyStackTest {
         INode pop = myStack.pop();
         myStack.printStack();
         Assertions.assertEquals(myThirdNode,pop);
-
     }
+    @Test
+    public void given3NumbersInStacckWhenPopedShouldMatchWithFirstAddedNode() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
 
+        MyStack myStack = new MyStack();
+        MyStack.append(myFirstNode);
+        MyStack.append(mySecondNode);
+        MyStack.append(myThirdNode);
+        INode pop = myStack.pop();
+        myStack.printStack();
+        Assertions.assertEquals(myFirstNode,pop);
+    }
 }
