@@ -26,4 +26,8 @@ public class MyStack {
     public INode pop() {
         return myLinkedList.pop();
     }
+
+    public static void append(INode myNode) {
+        myLinkedList.append(myNode);
+    }
 }
