@@ -108,4 +108,22 @@ public class MyLinkedListTest {
         boolean result =  (nodePosition==2);
         Assertions.assertTrue(result);
     }
+
+    @Test
+    public void givenValueWhenInsertedAfterParticularValueInLinkedListShouldPassResult(){
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+
+        MyNode<Integer> insertingNode = new MyNode<>(40);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.printMyNodes();
+        myLinkedList.insertValueAtParticularPosition(mySecondNode,insertingNode);
+        myLinkedList.printMyNodes();
+        boolean result =  mySecondNode.getNext().equals(insertingNode);
+        Assertions.assertTrue(result);
+    }
 }
