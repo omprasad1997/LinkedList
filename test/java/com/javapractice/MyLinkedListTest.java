@@ -146,4 +146,5 @@ public class MyLinkedListTest {
         boolean result = (finalSize == 3);
         Assertions.assertTrue(result);
     }
+
 }
