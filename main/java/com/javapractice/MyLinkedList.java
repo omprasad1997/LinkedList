@@ -84,4 +84,16 @@ public class MyLinkedList {
         }
         return count;
     }
+
+    public void insertValueAtParticularPosition(INode mySecondNode, INode insertingNode) {
+        INode tempNode = head;
+        while(tempNode != null && tempNode.getKey() != mySecondNode.getKey())
+        {
+            tempNode = tempNode.getNext();
+        }
+        INode tempNode2 = tempNode;
+        tempNode = tempNode.getNext();
+        tempNode2.setNext(insertingNode);
+        insertingNode.setNext(tempNode);
+    }
 }
