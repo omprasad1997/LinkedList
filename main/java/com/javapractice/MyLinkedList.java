@@ -96,4 +96,29 @@ public class MyLinkedList {
         tempNode2.setNext(insertingNode);
         insertingNode.setNext(tempNode);
     }
+
+    public int size() {
+        INode tempNode = head;
+        int count = 0;
+        while(tempNode != null){
+            tempNode = tempNode.getNext();
+            count++;
+        }
+        System.out.println("Size is : " + count);
+        return count;
+    }
+
+
+    public INode deleteValueFromParticularPosition(INode deletingNode) {
+        INode tempNode = head;
+
+            while(tempNode != null && tempNode.getNext().getKey() != deletingNode.getKey())
+            {
+                tempNode = tempNode.getNext();
+            }
+            INode newTempNode = tempNode.getNext();
+            tempNode.setNext(tempNode.getNext().getNext());
+            newTempNode.setNext(null);
+            return tempNode;
+    }
 }
