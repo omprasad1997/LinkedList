@@ -14,6 +14,10 @@ public class MyStack {
         myLinkedList.add(myNode);
     }
 
+    public static void append(INode myNode) {
+         myLinkedList.append(myNode);
+    }
+
     public void printStack() {
         myLinkedList.printMyNodes();
 
