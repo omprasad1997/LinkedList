@@ -126,4 +126,24 @@ public class MyLinkedListTest {
         boolean result =  mySecondNode.getNext().equals(insertingNode);
         Assertions.assertTrue(result);
     }
+    @Test
+    public void givenValueWhenDeletedFromParticularPositionInLinkedListShouldPassResult(){
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(40);
+        MyNode<Integer> myFourthNode = new MyNode<>(70);
+
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.append(myFirstNode);
+        myLinkedList.append(mySecondNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.append(myFourthNode);
+        myLinkedList.printMyNodes();
+        myLinkedList.size();
+        myLinkedList.deleteValueFromParticularPosition(myThirdNode);
+        myLinkedList.printMyNodes();
+        int finalSize = myLinkedList.size();
+        boolean result = (finalSize == 3);
+        Assertions.assertTrue(result);
+    }
 }
