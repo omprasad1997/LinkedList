@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class MyStackTest {
     @Test
-   public void given3NumbersWhenAddedToStatckSholudHaveLastAddedNode() {
+   public void given3NumbersWhenAddedToStackShouldHaveLastAddedNode() {
         MyNode<Integer> myFirstNode = new MyNode<>(70);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(56);
@@ -20,7 +20,7 @@ public class MyStackTest {
         Assertions.assertEquals(myThirdNode,peak);
     }
     @Test
-    public void given3NumbersInStackWhenPopedShouldMatchWithLastAddedNode() {
+    public void given3NumbersInStackWhenPoppedShouldMatchWithLastAddedNode() {
         MyNode<Integer> myFirstNode = new MyNode<>(70);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(56);
@@ -35,9 +35,8 @@ public class MyStackTest {
 
     }
 
-
     @Test
-    public void given3NumbersInStacckWhenPopedShouldMatchWithFirstAddedNode() {
+    public void given3NumbersInStackWhenPoppedShouldMatchWithFirstAddedNode() {
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
         MyNode<Integer> myThirdNode = new MyNode<>(70);
